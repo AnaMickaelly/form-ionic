@@ -45,11 +45,7 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Home</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <IonHeader></IonHeader>
       <IonToolbar>
         <IonTitle size="small">Formulário de Cadastro</IonTitle>
       </IonToolbar>
@@ -77,7 +73,7 @@ const Home: React.FC = () => {
             <IonItemDivider>Senha</IonItemDivider>
             <IonItem>
               <IonInput
-                type="text"
+                type="password"
                 value={password}
                 placeholder="senha"
                 onIonChange={(e) => setPassword(e.detail.value!)}

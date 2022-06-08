@@ -9,3 +9,13 @@ export const handleSaveUser = async (data: any) => {
     console.log(err);
   }
 };
+
+export const getUsers = async () => {
+  try {
+    const { data: response } = await api.get('usuarios');
+
+    return response;
+  } catch (err) {
+    console.log(err);
+  }
+};

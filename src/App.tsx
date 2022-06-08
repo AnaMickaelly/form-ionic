@@ -22,11 +22,11 @@ import '@ionic/react/css/structure.css';
 import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/typography.css';
-import { ellipse, home, square } from 'ionicons/icons';
+import { cardSharp, listSharp, logInSharp } from 'ionicons/icons';
 import { Redirect, Route } from 'react-router-dom';
+import Details from './pages/details';
 import Home from './pages/home';
 import Login from './pages/login';
-import Tab3 from './pages/Tab3';
 /* Theme variables */
 import './theme/variables.css';
 
@@ -43,25 +43,25 @@ const App: React.FC = () => (
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/details">
+            <Details />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/login">
-            <IonIcon icon={home} />
+          <IonTabButton tab="login" href="/login">
+            <IonIcon icon={logInSharp} />
             <IonLabel>Login</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/home">
-            <IonIcon icon={ellipse} />
+          <IonTabButton tab="home" href="/home">
+            <IonIcon icon={cardSharp} />
             <IonLabel>Formulário</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="details" href="/details">
+            <IonIcon icon={listSharp} />
+            <IonLabel>Detalhes</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
