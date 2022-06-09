@@ -46,7 +46,7 @@ const Login: React.FC = () => {
       <IonContent fullscreen>
         <form>
           <IonList>
-            <IonItemDivider>E-mail</IonItemDivider>
+            <IonItemDivider color="secondary">E-mail</IonItemDivider>
             <IonItem>
               <IonInput
                 value={email}
@@ -55,19 +55,28 @@ const Login: React.FC = () => {
                 onIonChange={(e) => setEmail(e.detail.value!)}
               ></IonInput>
             </IonItem>
-            <IonItemDivider>Senha</IonItemDivider>
+            <IonItemDivider color="secondary">Senha</IonItemDivider>
             <IonItem>
               <IonInput
                 type="text"
                 value={password}
                 placeholder="digite sua senha"
+                color="dark"
                 onIonChange={(e) => setPassword(e.detail.value!)}
               ></IonInput>
             </IonItem>
           </IonList>
-          <IonButton onClick={handlerSubmit} color="primary">
-            enviar
-          </IonButton>
+          <div className="container-button">
+            <IonButton
+              fill="solid"
+              size="default"
+              expand="block"
+              onClick={handlerSubmit}
+              color="secondary"
+            >
+              enviar
+            </IonButton>
+          </div>
         </form>
       </IonContent>
     </IonPage>

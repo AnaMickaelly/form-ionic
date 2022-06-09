@@ -5,7 +5,6 @@ import {
   IonInput,
   IonItem,
   IonItemDivider,
-  IonLabel,
   IonList,
   IonPage,
   IonTitle,
@@ -47,12 +46,12 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader></IonHeader>
       <IonToolbar>
-        <IonTitle size="small">Formulário de Cadastro</IonTitle>
+        <IonTitle color="dark">Formulário de Cadastro</IonTitle>
       </IonToolbar>
       <IonContent fullscreen>
         <form>
           <IonList>
-            <IonItemDivider>Nome</IonItemDivider>
+            <IonItemDivider color="secondary">Nome</IonItemDivider>
             <IonItem>
               <IonInput
                 value={name}
@@ -61,7 +60,7 @@ const Home: React.FC = () => {
                 onIonChange={(e) => setName(e.detail.value!)}
               ></IonInput>
             </IonItem>
-            <IonItemDivider>CPF</IonItemDivider>
+            <IonItemDivider color="secondary">CPF</IonItemDivider>
             <IonItem>
               <IonInput
                 value={cpf}
@@ -70,7 +69,7 @@ const Home: React.FC = () => {
                 onIonChange={(e) => setCpf(e.detail.value!)}
               ></IonInput>
             </IonItem>
-            <IonItemDivider>Senha</IonItemDivider>
+            <IonItemDivider color="secondary">Senha</IonItemDivider>
             <IonItem>
               <IonInput
                 type="password"
@@ -79,26 +78,25 @@ const Home: React.FC = () => {
                 onIonChange={(e) => setPassword(e.detail.value!)}
               ></IonInput>
             </IonItem>
-            <IonItemDivider>E-mail</IonItemDivider>
+            <IonItemDivider color="secondary">E-mail</IonItemDivider>
             <IonItem>
               <IonInput
                 value={email}
                 placeholder="e-mail"
+                color="dark"
                 type="email"
                 onIonChange={(e) => setEmail(e.detail.value!)}
               ></IonInput>
             </IonItem>
-            <IonItem>
-              <IonLabel position="stacked">Endereço</IonLabel>
-              <IonInput placeholder="Rua" type="search"></IonInput>
-              <IonInput placeholder="Bairro"></IonInput>
-              <IonInput placeholder="Cidade"></IonInput>
-              <IonInput placeholder="Estado"></IonInput>
-              <IonInput placeholder="Cep"></IonInput>
-            </IonItem>
           </IonList>
-          <IonButton onClick={handlerSubmit} color="primary">
-            Primary
+          <IonButton
+            fill="solid"
+            size="default"
+            expand="block"
+            onClick={handlerSubmit}
+            color="secondary"
+          >
+            enviar
           </IonButton>
         </form>
       </IonContent>

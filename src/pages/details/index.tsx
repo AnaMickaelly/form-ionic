@@ -2,10 +2,10 @@ import {
   IonCard,
   IonCardContent,
   IonCardHeader,
-  IonCardSubtitle,
   IonContent,
   IonHeader,
   IonPage,
+  IonTitle,
   IonToolbar,
 } from '@ionic/react';
 import { useEffect, useState } from 'react';
@@ -32,12 +32,12 @@ const Details: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonCardHeader>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+            <IonTitle color="dark">Suas informações:</IonTitle>
           </IonCardHeader>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonCard>
+        <IonCard color="secondary">
           {users?.items?.map((item: any) => (
             <IonCardContent key={item.cpf}>
               <h2> {item.nome} </h2>
