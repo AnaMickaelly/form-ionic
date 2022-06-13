@@ -44,7 +44,7 @@ const Login: React.FC = () => {
         </IonTitle>
       </IonHeader>
       <IonContent fullscreen>
-        <div className="image">
+        <div className="image-girl">
           <IonImg src={img}></IonImg>
         </div>
         <form className="form-style">

@@ -52,15 +52,15 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="login" href="/login">
-            <IonIcon icon={logInSharp} />
+            <IonIcon color="tertiary" icon={logInSharp} />
             <IonLabel>Login</IonLabel>
           </IonTabButton>
           <IonTabButton tab="home" href="/home">
-            <IonIcon icon={cardSharp} />
+            <IonIcon color="tertiary" icon={cardSharp} />
             <IonLabel>Formulário</IonLabel>
           </IonTabButton>
           <IonTabButton tab="details" href="/details">
-            <IonIcon icon={listSharp} />
+            <IonIcon color="tertiary" icon={listSharp} />
             <IonLabel>Detalhes</IonLabel>
           </IonTabButton>
         </IonTabBar>

@@ -32,12 +32,12 @@ const Details: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonCardHeader>
-            <IonTitle color="dark">Suas informações:</IonTitle>
+            <IonTitle color="tertiary">Suas informações:</IonTitle>
           </IonCardHeader>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonCard color="secondary">
+        <IonCard color="tertiary">
           {users?.items?.map((item: any) => (
             <IonCardContent key={item.cpf}>
               <h2> {item.nome} </h2>

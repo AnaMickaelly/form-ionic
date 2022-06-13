@@ -1,0 +1,7 @@
+.image {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -20px;
+  padding: 5rem;
+}
